@@ -33,10 +33,15 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-;; To install a package run
-;; M-x package-refresh-contents
-;; M-x package-install RET <package>
+;; install packages
+(defun install-packages ()
+  "Install packages"
+  (interactive)
+  (package-refresh-contents)
+  (package-install 'evil))
 
 ;; Evil mode (VIM bindings)
 (require 'evil)
 (evil-mode 1)
+
+

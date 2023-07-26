@@ -1,3 +1,15 @@
+;; edit-config
+(defun edit-config ()
+  "Open the init file."
+  (interactive)
+  (find-file user-init-file))
+
+;; reload-config
+(defun reload-config ()
+  "Reload the init file."
+  (interactive)
+  (load-file user-init-file))
+
 ;; GUI settings
 (menu-bar-mode -1)
 (tool-bar-mode -1)

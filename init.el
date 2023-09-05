@@ -38,10 +38,8 @@
   "Install packages"
   (interactive)
   (package-refresh-contents)
-  (package-install 'evil))
+  (package-install 'smex))
 
-;; Evil mode (VIM bindings)
-(require 'evil)
-(evil-mode 1)
-
-
+;; Smex is a M-x enhancement for Emacs. Built on top of Ido.
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
